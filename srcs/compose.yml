@@ -41,14 +41,14 @@ volumes:
     driver: local
     driver_opts:
       type: none
-      device: /home/qtay/data/mariadb
+      device: /home/chtan/data/mariadb
       o: bind
 
   wordpress:
     driver: local
     driver_opts:
       type: none
-      device: /home/qtay/data/wordpress
+      device: /home/chtan/data/wordpress
       o: bind
 
 networks:
