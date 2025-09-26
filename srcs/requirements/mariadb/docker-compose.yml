@@ -1,0 +1,21 @@
+version: "3.9"
+
+services:
+  db:
+    image: mariadb:11.4   # stable version
+    container_name: mariadb-basic
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpass
+      MYSQL_DATABASE: mydb
+      MYSQL_USER: myuser
+      MYSQL_PASSWORD: mypass
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./conf.d:/etc/mysql/conf.d:ro
+      - ./tools/init.sql:/docker-entrypoint-initdb.d/init.sql:ro
+      - mariadb_data:/var/lib/mysql
+
+volumes:
+  mariadb_data:
