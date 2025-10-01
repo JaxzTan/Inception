@@ -39,3 +39,6 @@
 
 # debug information files
 *.dwo
+
+chtan.42.fr.key
+chtan.42.fr.crt
