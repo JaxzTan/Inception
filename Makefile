@@ -1,19 +1,19 @@
 all: build start
 
 build:
-	@docker compose -f ./srcs/compose.yaml build
+	@docker compose -f ./srcs/docker-compose.yml build
 
 start:
-	@docker compose -f ./srcs/compose.yaml up -d
+	@docker compose -f ./srcs/docker-compose.yml up -d
 
 stop:
-	@docker compose -f ./srcs/compose.yaml stop
+	@docker compose -f ./srcs/docker-compose.yml stop
 
 down:
-	@docker compose -f ./srcs/compose.yaml down
+	@docker compose -f ./srcs/docker-compose.yml down
 
 logs:
-	@docker compose -f ./srcs/compose.yaml logs -f
+	@docker compose -f ./srcs/docker-compose.yml logs -f
 
 # Add this to ease eval
 clean:
